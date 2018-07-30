@@ -106,7 +106,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // LightPayCoin: 1 day
         nTargetSpacing = 1 * 60;  // LightPayCoin: 1 minute
-        nLastPOWBlock = 90;
+        nLastPOWBlock = 50;
         nMaturity = 10;
         nMasternodeCountDrift = 20;
         nMasternodeCollateralLimit = 1000;
