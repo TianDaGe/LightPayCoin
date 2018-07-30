@@ -96,7 +96,7 @@ public:
         pchMessageStart[2] = 0x4f;
         pchMessageStart[3] = 0x5a;
         vAlertPubKey = ParseHex("040d75796902e3eda97815d744328237872309a95b42a74b22d7580e56b086fbc19ae1d6ef30c9e27d060c9c48692a663b9a321161e19f853ca6a6499cba7d17f6");
-        nDefaultPort = 39797;
+        nDefaultPort = 49797;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // LightPayCoin starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
@@ -107,7 +107,7 @@ public:
         nTargetTimespan = 1 * 60; // LightPayCoin: 1 day
         nTargetSpacing = 1 * 60;  // LightPayCoin: 1 minute
         nLastPOWBlock = 90;
-        nMaturity = 50;
+        nMaturity = 10;
         nMasternodeCountDrift = 20;
         nMasternodeCollateralLimit = 1000;
         nModifierUpdateBlock = 615800;
@@ -142,8 +142,12 @@ public:
         assert(hashGenesisBlock == uint256("00000dfdec6a9190b26520e93ef5eba15a82646a47ddf8fb5be4477a836467ee"));
         assert(genesis.hashMerkleRoot == uint256("98a0c0dc8214278a8a27ce9d7ca4107dd7cd6787ea6001d3d6c1a7b764098570"));
 
-        vSeeds.push_back(CDNSSeedData("80.211.202.181", "80.211.202.181"));         // Single node address
-        vSeeds.push_back(CDNSSeedData("94.177.187.54", "94.177.187.54"));           // Single node address
+        vSeeds.push_back(CDNSSeedData("1", "178.128.145.147"));
+        vSeeds.push_back(CDNSSeedData("2", "167.99.45.10"));
+        vSeeds.push_back(CDNSSeedData("3", "139.59.74.84"));
+        vSeeds.push_back(CDNSSeedData("4", "206.189.58.59"));
+        vSeeds.push_back(CDNSSeedData("5", "178.128.194.194"));
+        vSeeds.push_back(CDNSSeedData("6", "206.189.126.13"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 49);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
@@ -194,7 +198,7 @@ public:
         pchMessageStart[2] = 0x5e;
         pchMessageStart[3] = 0x78;
         vAlertPubKey = ParseHex("043e8760d1c9ef3af5a5e49796afe4389a5cb53c6028b54b9af0a152f34762e453615a1aab9260a31045b85f87d4de36bbe6fd04478fcc103fd47c8e1b813c3d3c");
-        nDefaultPort = 39795;
+        nDefaultPort = 49795;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -282,7 +286,7 @@ public:
         genesis.nNonce = 906460;
 
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 39793;
+        nDefaultPort = 49793;
         assert(hashGenesisBlock == uint256("00000d885e2813770fd59e71010b6b62a9b0609655109bf4e1b24c3bd524ae0c"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
@@ -313,7 +317,7 @@ public:
     {
         networkID = CBaseChainParams::UNITTEST;
         strNetworkID = "unittest";
-        nDefaultPort = 39791;
+        nDefaultPort = 49791;
         vFixedSeeds.clear(); //! Unit test mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Unit test mode doesn't have any DNS seeds.
 
